@@ -6,9 +6,9 @@ d = arr[0].to_i
 m = arr[1].to_i
 y = arr[2].to_i
 
-months = [31,28,31,30,31,30,31,31,30,31,30,31]
-months[1] = 29  if (y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)
-index = months.take(m).sum
+months = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] #первый месяц = 0 дней.
+months[2] = 29  if (y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)
+index = months.take(m).sum + d
 puts "Date Serial Number starting from the beginning of the year is #{index}."
 
 

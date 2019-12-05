@@ -16,10 +16,10 @@ end
 puts purch
 
 total = 0
-purch.each do |n, p, a|
-  sum = purch[n][:price] * purch[n][:quant] # не получилось использовать переменные: name, p, a.
-  total += sum # Вычислить итоговую сумму всех покупок
-  puts "Sum for #{n} is #{sum}." 
+purch.each do |item, options|
+  sum = options[:price] * options[:quant] # purch[item][:price] == options[:pirce]
+  puts "Sum for #{item} is #{sum}." 
+  total += sum
 end
 puts "Total amount is #{total}." 
 
