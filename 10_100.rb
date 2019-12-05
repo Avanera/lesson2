@@ -1,9 +1,18 @@
+range = (10..100)
 my_array = []
 
-i = 10
-while i <= 100
-	my_array << i
-	i += 5
+range.step(5) do|x| 
+  my_array << x
 end
 
 print my_array
+
+
+
+#i = 10
+#hile i <= 100
+#  my_array << i
+#  i += 5
+#end
+
+#print my_array

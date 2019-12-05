@@ -1,13 +1,20 @@
 
-
+alph = ("a".."z").to_a
 vowels = ["a","e","i","o","u","y"]
 
-hash = Hash.new
-
-i = 0
-vowels.each do |v| hash[v] = (i + 1)
-	i += 1
+hash = {}
+alph.each.with_index do |letter, index|
+#text = "#{letter} - #{index},"
+hash[letter] = index
 end
 
+hash2 = {}
 
-puts hash
+vowels.each do |v| 
+  if hash.include? v
+  #puts "#{v} - #{hash[v]}"
+  hash2[v] = hash[v]
+  end
+end
+
+puts hash2
